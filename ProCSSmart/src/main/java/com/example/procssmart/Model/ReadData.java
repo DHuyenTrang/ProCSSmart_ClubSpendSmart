@@ -29,7 +29,7 @@ public class ReadData {
         }
         return moneyList;
     }
-
+//
 //    public static void main(String[] args) {
 //        ReadData read = new ReadData();
 //        List<Money> moneyList = read.readToList();

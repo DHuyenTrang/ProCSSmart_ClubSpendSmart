@@ -2,23 +2,33 @@ package com.example.procssmart.View;
 
 import com.example.procssmart.Controller.AddMoney;
 import com.example.procssmart.Model.Money;
+import com.example.procssmart.Model.ReadData;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 
-public class ControlMainView {
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+public class ControlMainView implements Initializable {
 
     @FXML
     private Button addNewMoneyButton;
 
     @FXML
-    private TableColumn<?, ?> content;
+    private TableColumn<Money, String> content;
 
     @FXML
-    private TableColumn<?, ?> date;
+    private TableColumn<Money, String> date;
 
     @FXML
     private GridPane layoutAddMoney;
@@ -30,7 +40,7 @@ public class ControlMainView {
     private Button showAddLayoutButton;
 
     @FXML
-    private TableView<?> tableData;
+    private TableView<Money> tableData;
 
     @FXML
     private TextField textContent;
@@ -39,7 +49,7 @@ public class ControlMainView {
     private TextField textValue;
 
     @FXML
-    private TableColumn<?, ?> type;
+    private TableColumn<Money, String> type;
 
     @FXML
     private RadioButton type1;
@@ -56,8 +66,11 @@ public class ControlMainView {
     private Label labelSuccessful;
 
     @FXML
-    private TableColumn<?, ?> value;
+    private TableColumn<Money, String> value;
     String getType;
+    ReadData read = new ReadData();
+    List<Money> moneyList = read.readToList();
+    ObservableList<Money> moneyObservableList = FXCollections.observableArrayList(moneyList);
 
     @FXML
     void addMoney(ActionEvent event) {
@@ -68,6 +81,7 @@ public class ControlMainView {
         Money money = new Money(content, getType, date, value);
         AddMoney addNew = new AddMoney();
         addNew.add(money);
+        moneyObservableList.add(money);
 
         labelSuccessful.setText("Thêm khoản chi thành công!");
     }
@@ -91,4 +105,15 @@ public class ControlMainView {
         });
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        content.setCellValueFactory(new PropertyValueFactory<Money, String>("content"));
+        date.setCellValueFactory(new PropertyValueFactory<Money, String>("date"));
+        value.setCellValueFactory(new PropertyValueFactory<Money, String>("value"));
+        type.setCellValueFactory(new PropertyValueFactory<Money, String>("type"));
+
+        tableData.setItems(moneyObservableList);
+    }
 }

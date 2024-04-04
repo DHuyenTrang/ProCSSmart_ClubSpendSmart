@@ -1,6 +1,7 @@
 package com.example.procssmart.View;
 
 import com.example.procssmart.Controller.AddMoney;
+import com.example.procssmart.Controller.SortByDate;
 import com.example.procssmart.Model.Money;
 import com.example.procssmart.Model.ReadData;
 import javafx.beans.Observable;
@@ -10,16 +11,33 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControlMainView implements Initializable {
+    @FXML
+    private Button buttonHome;
+
+    @FXML
+    private Button buttonIncome;
+
+    @FXML
+    private Button buttonPayment;
+
+    @FXML
+    private Button buttonReport;
 
     @FXML
     private Button addNewMoneyButton;
@@ -67,47 +85,19 @@ public class ControlMainView implements Initializable {
 
     @FXML
     private TableColumn<Money, String> value;
-    String getType;
     ReadData read = new ReadData();
-    List<Money> moneyList = read.readToList();
-    ObservableList<Money> moneyObservableList = FXCollections.observableArrayList(moneyList);
+    List<Money> moneyListIn = read.readToListIn();
+    List<Money> moneyListOut = read.readToListOut();
+    List<Money> moneyList = new ArrayList<>();
 
-    @FXML
-    void addMoney(ActionEvent event) {
-        String content = textContent.getText();
-        String date = pickDate.getValue().toString();
-        String value = textValue.getText();
-
-        Money money = new Money(content, getType, date, value);
-        AddMoney addNew = new AddMoney();
-        addNew.add(money);
-        moneyObservableList.add(money);
-
-        labelSuccessful.setText("Thêm khoản chi thành công!");
-    }
-
-    @FXML
-    void showAddLayout(ActionEvent event) {
-        layoutAddMoney.setVisible(true);
-
-        ToggleGroup groupChooseType = new ToggleGroup();
-        type1.setToggleGroup(groupChooseType);
-        type2.setToggleGroup(groupChooseType);
-        type3.setToggleGroup(groupChooseType);
-        type4.setToggleGroup(groupChooseType);
-
-        groupChooseType.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
-                RadioButton radio = (RadioButton) t1;
-                getType = radio.getText();
-            }
-        });
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        moneyList.addAll(moneyListOut);
+        moneyList.addAll(moneyListIn);
+        moneyList.sort(new SortByDate());
 
+        ObservableList<Money> moneyObservableList = FXCollections.observableArrayList(moneyList);
 
         content.setCellValueFactory(new PropertyValueFactory<Money, String>("content"));
         date.setCellValueFactory(new PropertyValueFactory<Money, String>("date"));
@@ -115,5 +105,37 @@ public class ControlMainView implements Initializable {
         type.setCellValueFactory(new PropertyValueFactory<Money, String>("type"));
 
         tableData.setItems(moneyObservableList);
+    }
+    @FXML
+    void sceneHome(ActionEvent event){}
+
+    @FXML
+    void sceneIncome(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("income-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void scenePayment(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("payment-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void sceneReport(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("report-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 }

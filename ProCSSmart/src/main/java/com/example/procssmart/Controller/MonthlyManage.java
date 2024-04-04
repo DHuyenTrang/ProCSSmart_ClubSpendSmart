@@ -24,7 +24,7 @@ public class MonthlyManage {
             Money money = moneyList.get(i);
             Money nextMoney = moneyList.get(i + 1);
             if(Objects.equals(money.getYear(), nextMoney.getYear()) && Objects.equals(money.getMonth(), nextMoney.getMonth())){
-                
+
             }
         }
     }

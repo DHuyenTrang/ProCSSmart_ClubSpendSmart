@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.procssmart.View.ControlIncomeView">
+   <children>
+      <VBox prefHeight="645.0" prefWidth="162.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Label prefHeight="110.0" prefWidth="150.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="25" text="" wrappingWidth="8.628583908081055" />
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Button fx:id="buttonHome1" mnemonicParsing="false" onAction="#sceneHome" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" text="" />
+               </graphic>
+            </Button>
+            <Button fx:id="buttonIncome1" mnemonicParsing="false" onAction="#sceneIncome" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Income" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK" />
+               </graphic>
+            </Button>
+            <Button fx:id="buttonPayment1" mnemonicParsing="false" onAction="#scenePayment" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Payment" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DOLLAR" />
+               </graphic>
+            </Button>
+            <Button fx:id="buttonReport1" mnemonicParsing="false" onAction="#sceneReport" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Report" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="tableData" editable="true" layoutX="174.0" layoutY="237.0" onMouseClicked="#rowClicked" prefHeight="400.0" prefWidth="600.0" stylesheets="@styling.css">
+         <columns>
+            <TableColumn fx:id="content" prefWidth="188.8000030517578" text="Content" />
+            <TableColumn fx:id="value" prefWidth="136.79998779296875" text="Value" />
+            <TableColumn fx:id="date" prefWidth="134.4000244140625" text="Date" />
+            <TableColumn fx:id="type" prefWidth="143.20001220703125" text="Type" />
+         </columns>
+      </TableView>
+      <Button fx:id="buttonAdd" layoutX="174.0" layoutY="204.0" mnemonicParsing="false" onAction="#AddMoney" prefHeight="26.0" prefWidth="214.0" styleClass="button2" stylesheets="@styling.css" text="Thêm" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="162.0" layoutY="62.0" prefHeight="130.0" prefWidth="628.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label layoutX="38.0" layoutY="45.0" prefHeight="45.0" prefWidth="383.0" text="Khoản thu" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <GridPane fx:id="layoutAddMoney" layoutX="200.0" layoutY="220.0" prefHeight="231.0" prefWidth="286.0" style="-fx-background-color: white; -fx-border-color: #503684;" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.39996337890625" minWidth="50.0" prefWidth="77.19992065429688" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="428.8000793457031" minWidth="10.0" prefWidth="428.8000793457031" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="42.19998779296875" minHeight="10.0" prefHeight="42.19998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="42.19998779296875" minHeight="10.0" prefHeight="42.19998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="47.2" minHeight="8.600012207031249" prefHeight="42.40001220703125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="44.599999999999994" minHeight="0.0" prefHeight="43.80001220703126" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text=" Content" textFill="#503684" GridPane.rowIndex="1" />
+                  <Label text=" Value" textFill="#503684" GridPane.rowIndex="3" />
+                  <Label text=" Date" textFill="#503684" GridPane.rowIndex="2" />
+                  <TextField fx:id="textContent" prefHeight="35.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textValue" prefHeight="33.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <DatePicker fx:id="pickDate" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <HBox prefHeight="32.0" prefWidth="405.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Button fx:id="addNewMoneyButton" mnemonicParsing="false" onAction="#addMoney" prefHeight="36.0" prefWidth="54.0" styleClass="button2" stylesheets="@styling.css" text="Add" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="labelSuccessful" prefHeight="34.0" prefWidth="172.0" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets top="7.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label layoutY="11.0" text="Add Money" textFill="#503684">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonCloseAdd" layoutX="208.0" layoutY="2.0" mnemonicParsing="false" onAction="#DisableAdd">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOSE" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <GridPane fx:id="layoutFixMoney" layoutX="200.0" layoutY="220.0" prefHeight="231.0" prefWidth="286.0" style="-fx-background-color: #fefefe; -fx-border-color: #503684;" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.39996337890625" minWidth="50.0" prefWidth="77.19992065429688" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="428.8000793457031" minWidth="10.0" prefWidth="428.8000793457031" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="42.19998779296875" minHeight="10.0" prefHeight="42.19998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="42.19998779296875" minHeight="10.0" prefHeight="42.19998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="47.2" minHeight="8.600012207031249" prefHeight="42.40001220703125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="44.599999999999994" minHeight="0.0" prefHeight="43.80001220703126" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text=" Content" textFill="#503684" GridPane.rowIndex="1" />
+                  <Label text=" Value" textFill="#503684" GridPane.rowIndex="3" />
+                  <Label text=" Date" textFill="#503684" GridPane.rowIndex="2" />
+                  <TextField fx:id="fixContent" prefHeight="35.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="fixValue" prefHeight="33.0" prefWidth="394.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <DatePicker fx:id="fixDate" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <HBox prefHeight="32.0" prefWidth="405.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Button fx:id="addNewMoneyButton1" mnemonicParsing="false" onAction="#buttonSubmit" prefHeight="36.0" prefWidth="66.0" styleClass="button2" stylesheets="@styling.css" text="Submit" textFill="#fffefe">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#DeleteMoney" prefHeight="35.0" prefWidth="66.0" styleClass="button2" stylesheets="@styling.css" text="Delete" textFill="#fffefe">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <GridPane.margin>
+                        <Insets top="7.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label layoutX="14.0" layoutY="11.0" text="Fix Money" textFill="#503684">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonExit" layoutX="208.0" mnemonicParsing="false" onAction="#DisableFix">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOSE" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

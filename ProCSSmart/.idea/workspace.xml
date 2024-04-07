@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="71b0baee-2bf3-4939-9e68-0a6b38858784" name="Changes" comment="code sai của em ạ">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/styling.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Controller/AddMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Controller/AddMoney.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Controller/MonthlyManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Controller/MonthlyManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Model/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Model/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Model/ReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/Model/ReadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/View/ControlIncomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/View/ControlIncomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/View/ControlPaymentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/View/ControlPaymentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/procssmart/View/ControlReportView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/procssmart/View/ControlReportView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/income-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/income-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/payment-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/payment-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/report-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/View/report-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/dataIncome.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/dataIncome.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/dataPayment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/procssmart/dataPayment.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dzDfe0ADRJJKld7joTeYRtzWLJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;error&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/huyen/Documents/GitHub/ProCSSmart_ClubSpendSmart/ProCSSmart/src/main/java/com/example/procssmart/View&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/huyen/Documents/GitHub/ProCSSmart_ClubSpendSmart/ProCSSmart/src/main/resources/com/example/procssmart/View&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\src\main\resources\com\example\procssmart\View" />
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\src\main\java\com\example\procssmart\View" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\target" />
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\src\main\resources\com\example\procssmart\View\View" />
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\src\main\resources\com\example\procssmart\View" />
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\src\main\resources\com\example\procssmart" />
+      <recent name="C:\Users\huyen\Documents\GitHub\ProCSSmart_ClubSpendSmart\ProCSSmart\src\main\View" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.procssmart.View" />
+      <recent name="com.example.procssmart" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.procssmart.Model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainView">
+    <configuration name="AddMoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.procssmart.Controller.AddMoney" />
+      <module name="ProCSSmart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.procssmart.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.procssmart.View.MainView" />
+      <module name="ProCSSmart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.procssmart.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Money" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.procssmart.Model.Money" />
+      <module name="ProCSSmart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.procssmart.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonthlyManage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.procssmart.Controller.MonthlyManage" />
+      <module name="ProCSSmart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.procssmart.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.procssmart.Model.ReadData" />
+      <module name="ProCSSmart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.procssmart.Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainView" />
+        <item itemvalue="Application.MonthlyManage" />
+        <item itemvalue="Application.Money" />
+        <item itemvalue="Application.ReadData" />
+        <item itemvalue="Application.AddMoney" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71b0baee-2bf3-4939-9e68-0a6b38858784" name="Changes" comment="" />
+      <created>1711002119787</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711002119787</updated>
+    </task>
+    <task id="LOCAL-00001" summary="code sai của em ạ">
+      <option name="closed" value="true" />
+      <created>1711684454634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711684454634</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="code sai của em ạ" />
+    <option name="LAST_COMMIT_MESSAGE" value="code sai của em ạ" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProCSSmart$MainView.ic" NAME="MainView Coverage Results" MODIFIED="1711214243196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.procssmart.View.*</FILTER>
+    </SUITE>
+  </component>
+</project>

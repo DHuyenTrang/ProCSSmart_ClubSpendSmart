@@ -7,62 +7,75 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="948.0" style="-fx-background-color: #cfcfcf;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.procssmart.View.ControlMainView">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.procssmart.View.ControlMainView">
    <children>
-      <TableView fx:id="tableData" editable="true" layoutX="177.0" layoutY="63.0" prefHeight="502.0" prefWidth="563.0">
+      <TableView fx:id="tableData" editable="true" layoutX="174.0" layoutY="237.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@styling.css">
          <columns>
-            <TableColumn fx:id="content" prefWidth="178.3999481201172" text="Content" />
-            <TableColumn fx:id="value" prefWidth="100.800048828125" text="Value" />
+            <TableColumn fx:id="content" prefWidth="175.1999969482422" text="Content" />
+            <TableColumn fx:id="value" prefWidth="115.20001220703125" text="Value" />
             <TableColumn fx:id="date" prefWidth="108.0" text="Date" />
             <TableColumn fx:id="type" prefWidth="176.0" text="Type" />
          </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
-      <VBox prefHeight="642.0" prefWidth="130.0" style="-fx-background-color: #ffff;">
+      <VBox prefHeight="645.0" prefWidth="161.0" style="-fx-background-color: #3F2B63;">
          <children>
-            <Label prefHeight="110.0" prefWidth="127.0">
+            <Label prefHeight="110.0" prefWidth="150.0">
                <graphic>
-                  <FontAwesomeIconView glyphName="BARS" size="25" text="" wrappingWidth="8.628583908081055" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="25" text="" wrappingWidth="8.628583908081055" />
                </graphic>
                <padding>
                   <Insets left="20.0" />
                </padding>
             </Label>
-            <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#sceneHome" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #ffff;" text="Home">
+            <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#sceneHome" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Home" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="20" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" text="" />
                </graphic>
             </Button>
-            <Button fx:id="buttonIncome" mnemonicParsing="false" onAction="#sceneIncome" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #ffff;" text="Income">
+            <Button fx:id="buttonIncome" mnemonicParsing="false" onAction="#sceneIncome" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Income" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView glyphName="CHECK" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK" />
                </graphic>
             </Button>
-            <Button fx:id="buttonPayment" mnemonicParsing="false" onAction="#scenePayment" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #ffff;" text="Payment">
+            <Button fx:id="buttonPayment" mnemonicParsing="false" onAction="#scenePayment" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Payment" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView glyphName="DOLLAR" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="DOLLAR" />
                </graphic>
             </Button>
-            <Button fx:id="buttonReport" mnemonicParsing="false" onAction="#sceneReport" prefHeight="80.0" prefWidth="130.0" style="-fx-background-color: #fff;" text="Report">
+            <Button fx:id="buttonReport" mnemonicParsing="false" onAction="#sceneReport" prefHeight="75.0" prefWidth="162.0" styleClass="button1" stylesheets="@styling.css" text="Report" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView glyphName="BOOK" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
                </graphic>
             </Button>
          </children>
       </VBox>
+      <Pane layoutX="160.0" layoutY="62.0" prefHeight="130.0" prefWidth="630.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label layoutX="38.0" layoutY="45.0" prefHeight="45.0" prefWidth="383.0" text="ProCSSmart - Club Spend Smart" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

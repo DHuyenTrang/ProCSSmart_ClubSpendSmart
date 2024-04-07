@@ -1,32 +1,19 @@
 package com.example.procssmart.Model;
 
+import com.example.procssmart.Controller.SortByDate;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadData {
     public  List<Money> readToList(){
-        List<Money> moneyList = new ArrayList<Money>();
+        List<Money> moneyList = new ArrayList<>();
 
-        File file = new File("C:\\Users\\huyen\\Documents\\GitHub\\ProCSSmart_ClubSpendSmart\\ProCSSmart\\src\\main\\Data\\dataMoney.txt");
-        FileReader reader = null;
-        try {
-            reader = new FileReader(file);
-            BufferedReader br = new BufferedReader(reader);
-            while (br.ready()){
-                String content = br.readLine();
-                String type = br.readLine();
-                String date = br.readLine();
-                String value = br.readLine();
+        moneyList.addAll(readToListIn());
+        moneyList.addAll(readToListOut());
+        moneyList.sort(new SortByDate());
 
-                Money money = new Money(content, type, date, value);
-                moneyList.add(money);
-            }
-
-            reader.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         return moneyList;
     }
 

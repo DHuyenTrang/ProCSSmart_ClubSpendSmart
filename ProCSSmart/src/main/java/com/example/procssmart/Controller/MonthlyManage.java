@@ -3,29 +3,28 @@ package com.example.procssmart.Controller;
 import com.example.procssmart.Model.Money;
 import com.example.procssmart.Model.ReadData;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class MonthlyManage {
-    MonthlyManage(){
-        ReadData read = new ReadData();
 
-        List<Money> moneyList = new ArrayList<>();
-        moneyList.addAll(read.readToListIn());
-        moneyList.addAll(read.readToListOut());
+    public int getValues(Money money){
+        int value = Integer.parseInt(money.getValue());
+        if(Objects.equals(money.getType(), "Tiền quỹ vào")) return value;
+        return -value;
+    }
+    public int getMoneyCurrent(String time){
+        ReadData read = new ReadData();
+        List<Money> moneyList = read.readToList();
 
         moneyList.sort(new SortByDate());
 
-        List<Integer> moneyCurrent = new ArrayList<>();
-        moneyCurrent.add(0);
-        int sum = Integer.parseInt(moneyList.getFirst().getValue());
-        for(int i = 0; i < moneyList.size(); i++){
-            Money money = moneyList.get(i);
-            Money nextMoney = moneyList.get(i + 1);
-            if(Objects.equals(money.getYear(), nextMoney.getYear()) && Objects.equals(money.getMonth(), nextMoney.getMonth())){
+        int sum = 0;
 
-            }
+        for(Money money: moneyList){
+            if(money.getMonthYear().compareTo(time) < 0) sum += getValues(money);
+            else break;
         }
+        return sum;
     }
 }

@@ -160,9 +160,9 @@ public class ControlPaymentView implements Initializable {
                 break;
             }
         }
-
+        addNew.clearOut();
         for(Money money: moneyObservableList){
-            addNew.addPayment(money, false);
+            addNew.addPayment(money);
         }
     }
 
@@ -188,7 +188,7 @@ public class ControlPaymentView implements Initializable {
 
         Money money = new Money(content, getType, date, value);
 
-        addNew.addPayment(money, true);
+        addNew.addPayment(money);
         moneyObservableList.add(money);
 
         labelSuccessful.setText("Thêm khoản chi thành công!");
@@ -233,6 +233,8 @@ public class ControlPaymentView implements Initializable {
                 break;
             }
         }
+
+        layoutFixMoney.setVisible(false);
     }
     @FXML
     void sceneHome(ActionEvent event) throws IOException {

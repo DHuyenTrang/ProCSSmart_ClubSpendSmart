@@ -10,11 +10,8 @@ public class Money implements Serializable {
         this.date = date;
         this.type = type;
     }
-    public String getMonth(){
-        return date.substring(5, 7);
-    }
-    public String getYear(){
-        return date.substring(0, 4);
+    public String getMonthYear(){
+        return date.substring(0, 7);
     }
     public String getContent() {
         return content;
@@ -46,6 +43,10 @@ public class Money implements Serializable {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String toString(){
+        return getType() + ": " + getContent() + ": " +  getValue() + ": " + getDate()   + "\n";
     }
 //    public static void main(String[] args) {
 //        Money money = new Money("quy", "Tiền quỹ vào", "2024-04-02", "598");

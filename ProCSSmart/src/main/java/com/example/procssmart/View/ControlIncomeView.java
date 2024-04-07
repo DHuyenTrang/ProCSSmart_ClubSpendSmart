@@ -51,6 +51,9 @@ public class ControlIncomeView implements Initializable {
     private Button buttonReport;
 
     @FXML
+    private Button buttonCloseAdd;
+
+    @FXML
     private TableColumn<Money, String> content;
 
     @FXML
@@ -97,6 +100,10 @@ public class ControlIncomeView implements Initializable {
     private Button buttonDelete;
 
     @FXML
+    private Button buttonAdd;
+
+
+    @FXML
     void DisableFix(ActionEvent event) {
         layoutFixMoney.setVisible(false);
     }
@@ -122,11 +129,21 @@ public class ControlIncomeView implements Initializable {
                 break;
             }
         }
-
+        addNew.clearIn();
         for(Money money: moneyObservableList){
+            System.out.println(moneyObservableList.size());
             //money.setType("Tiền quỹ vào");
-            addNew.addIncome(money, false);
+            addNew.addIncome(money);
         }
+    }
+    @FXML
+    void AddMoney(ActionEvent event) throws IOException {
+        layoutAddMoney.setVisible(true);
+    }
+
+    @FXML
+    void DisableAdd(ActionEvent event) {
+        layoutAddMoney.setVisible(false);
     }
 
     @FXML
@@ -137,10 +154,10 @@ public class ControlIncomeView implements Initializable {
 
         Money money = new Money(content, "Tiền quỹ vào", date, value);
 
-        addNew.addIncome(money, true);
+        addNew.addIncome(money);
         moneyObservableList.add(money);
 
-        labelSuccessful.setText("Thêm tiền vào thành công!");
+        layoutAddMoney.setVisible(false);
     }
 
     @FXML
@@ -206,6 +223,7 @@ public class ControlIncomeView implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         content.setCellValueFactory(new PropertyValueFactory<Money, String>("content"));
         date.setCellValueFactory(new PropertyValueFactory<Money, String>("date"));
         value.setCellValueFactory(new PropertyValueFactory<Money, String>("value"));
